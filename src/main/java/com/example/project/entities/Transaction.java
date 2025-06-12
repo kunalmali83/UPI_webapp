@@ -2,6 +2,7 @@ package com.example.project.entities;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,7 +14,10 @@ public class Transaction {
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
 
+	    @Column(name = "sender_upi")
 	    private String senderUpi;
+
+	    @Column(name = "receiver_upi")
 	    private String receiverUpi;
 	    private Double amount;
 	    private LocalDateTime timestamp;
